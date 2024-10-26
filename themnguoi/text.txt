@@ -1,0 +1,131 @@
+// Chức năng update
+// *Hiển thị thông tin học sinh lên các ô input
+// Bước 1: Gán được sự kiện onclick cho button update
+const updateStudent = (idStudentUpdate) => {
+	console.log('idStudentUpdate: ', idStudentUpdate);
+	// Bước 2: Lấy được thông tin học sinh mà mình muốn update
+	let index = -1;
+	for (let i = 0; i < listStudent.length; i++) {
+		if (listStudent[i].id === idStudentUpdate) {
+			index = i;
+		}
+	}
+	console.log('listStudent[index]: ', listStudent[index]);
+	const { id, name, gender, math_score, english_score, literature_score } =
+		listStudent[index];
+	// Bước 3: Hiển thị thông tin của học sinh đó lên các ô input tương ứng
+	$id.value = id;
+	$name.value = name;
+	$gender.value = gender;
+	$math_score.value = math_score;
+	$english_score.value = english_score;
+	$literature_score.value = literature_score;
+	// Bước 4: Disabled input nhập id
+	$id.disabled = true;
+	// Bước 5: Show button "Update student" và ẩn button "Create student"
+	$buttonUpdate.style.display = 'inline';
+	$buttonCreate.style.display = 'none';
+};
+// *Cập nhật lại thông tin học sinh
+// Bước 1: gán event on click cho button "Update student"
+$buttonUpdate.onclick = () => {
+	// Bước 2: lấy toàn bộ thông tin học sinh vừa được chỉnh sửa
+	const id = Number($id.value);
+	const name = $name.value;
+	const gender = $gender.value;
+	const math_score = $math_score.value;
+	const english_score = $english_score.value;
+	const literature_score = $literature_score.value;
+
+	const studentUpdate = {
+		id,
+		name,
+		gender,
+		math_score,
+		english_score,
+		literature_score,
+	};
+	// Bước 3: tìm vị trí index của học sinh đó
+	let index = -1;
+	for (let i = 0; i < listStudent.length; i++) {
+		if (listStudent[i].id === id) {
+			index = i;
+		}
+	}
+	console.log('index: ', index);
+	// Bước 4: cập nhật thông tin học sinh vào trong mảng
+	listStudent[index] = studentUpdate;
+	// Bước 5: gọi lại hàm renderStudents
+	renderStudents();
+	// Bước 6: Clear giá trị người dùng nhập ở input
+	clearInput();
+	// Bước 7: Enabled input nhập id
+	$id.disabled = false;
+	// Bước 8: Show button "Create student" và ẩn button "Update student"
+	$buttonUpdate.style.display = 'none';
+	$buttonCreate.style.display = 'inline';
+	// Bước 9: Cập nhật thông tin vào local storage
+	localStorage.setItem('listStudent', JSON.stringify(listStudent));
+};
+
+// Các bước làm phần search
+// Bước 1: Gán event onclick cho button search
+// $buttonSearch.onclick = () => {
+// 	console.log('Searching...');
+// 	// Bước 2: Lấy được từ khóa mà người dùng vừa nhập
+// 	const keywordSearch = $keywordSearch.value;
+// 	// Bước 3: Thực hiện lọc nội dung có chứa keyword
+// 	const result = listStudent.filter((student) =>
+// 		student.name.toLowerCase().includes(keywordSearch.toLowerCase())
+// 	);
+// 	console.log(result);
+// 	// Bước 4: Gọi hàm renderStudents để in ra kết quả vừa được xử lý
+// 	renderStudents(result);
+// };
+
+$keywordSearch.oninput = () => {
+	console.log('Searching...');
+	const keywordSearch = $keywordSearch.value;
+	const result = listStudent.filter((student) =>
+		student.name.toLowerCase().includes(keywordSearch.toLowerCase())
+	);
+	renderStudents(result);
+};
+
+-------------------------------------
+			<button id="create" type="button" class="btn btn-primary mt-3">Create student</button>
+			<button id="update" type="button" class="btn btn-primary mt-3" style="display: none">Update student</button>
+
+			<div class="search-bar mt-5" style="display: flex">
+				<input
+					type="text"
+					class="form-control"
+					id="keyword_search"
+					placeholder="Enter your keyword..."
+				/>
+				<button id="search" type="button" class="btn btn-primary" style="margin-left: 12px">
+					Search
+				</button>
+			</div>
+            ---------------
+
+
+// Chức năng delete
+// Bước 1: gán event onclick vào button delete
+const deleteStudent = (id) => {
+	// Các bước dưới xử lý trong event click
+	// Bước 2: lấy được id của học sinh muốn xóa
+	// Bước 3: tìm index của học đó trong danh sách
+	let index = -1;
+	for (let i = 0; i < listStudent.length; i++) {
+		if (listStudent[i].id === id) {
+			index = i;
+		}
+	}
+	// Bước 4: dùng hàm splice để xóa
+	listStudent.splice(index, 1);
+	// Bước 5: Gọi lại hàm renderStudents
+	renderStudents();
+	// Bước 6: Cập nhật thông tin vào local storage
+	localStorage.setItem('listStudent', JSON.stringify(listStudent));
+};

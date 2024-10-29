@@ -13,76 +13,106 @@
     <link rel="stylesheet" href="more.css" />
   </head>
   <body>
-    <div id="sideMenu" class="side-menu">
-      <a href="/home/home.html">Home</a>
-      <a href="/qlmuontra/qlnguoi.html">Quản lý người mượn</a>
-      <a href="/themnguoi/more.html">Thêm người mượn</a>
-      <a href="/qlsach/qlsach.html">Danh sách sách</a>
-      <a href="/thongke/thongke.html">Thống kê</a>
-    </div>
-
-    <div class="mt-3">
-      <div class="search-container">
-        <label for="#">Search:</label>
-        <input type="search" class="search-input" placeholder="Tìm kiếm..." />
+    <div class="son">
+      <div id="sideMenu" class="side-menu">
+        <img src="/images/anhtruong1.jpg" style="margin: 20px auto" />
+        <a href="/qlmuontra/qlnguoi.html">Quản lý người mượn</a>
+        <a href="/themnguoi/more.html">Thêm người mượn</a>
+        <a href="/qlsach/qlsach.html">Danh sách sách</a>
+        <a href="/thongke/thongke.html">Thống kê</a>
+        <a href="/home" style="margin-top: 300px; font-size: 15px"
+          >Đăng Xuất
+        </a>
       </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#Mã sinh viên</th>
-            <th scope="col">Tên sinh viên</th>
-            <th scope="col">Số điện thoại</th>
-            <th scope="col">Tên sách</th>
-            <th scope="col">Mã sách</th>
-            <th scope="col">Ngày mượn</th>
-            <th scope="col">Ngày trả</th>
-            <th scope="col">Status</th>
-          </tr>
-          <tr>
-            <td>232630226</td>
-            <td>Phạm Quang Huy</td>
-            <td>0983654356</td>
-            <td>Bài giảng mạng máy tính</td>
-            <td>002</td>
-            <td>20/11/2023</td>
-            <td>1/1/2024</td>
-            <td>Chấp nhận</td>
-          </tr>
-          <tr>
-            <td>232630225</td>
-            <td>Hồ Sỹ Sơn</td>
-            <td>0983457687</td>
-            <td>Bài tập Dung sai</td>
-            <td>003</td>
-            <td>21/3/2024</td>
-            <td>3/8/2024</td>
-            <td>Chấp nhận</td>
-          </tr>
-          <tr>
-            <td>232630224</td>
-            <td>Phạm Quang Hùng</td>
-            <td>0335688386</td>
-            <td>Ăng ten và truyền sóng</td>
-            <td>004</td>
-            <td>22/3/2024</td>
-            <td>22/4/2024</td>
-            <td>Chấp nhận</td>
-          </tr>
-          <tr>
-            <td>232630223</td>
-            <td>Nguyễn Hồng Phú</td>
-            <td>0956488888</td>
-            <td>Bài giảng mạng máy tính</td>
-            <td>005</td>
-            <td>2/2/2000</td>
-            <td>23/5/2024</td>
-            <td>Chấp nhận</td>
-          </tr>
-        </thead>
-        <tbody id="table"></tbody>
-      </table>
+      <div class="mt-3">
+        <div
+          class="search-bar mt-5"
+          style="display: flex; width: 70%; margin-left: 60px"
+        >
+          <input
+            type="text"
+            class="form-control"
+            id="keyword_search"
+            placeholder="Enter your keyword..."
+          />
+          <button
+            id="search"
+            type="button"
+            class="btn btn-primary"
+            style="margin-left: 12px"
+          >
+            Search
+          </button>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#Mã sinh viên</th>
+              <th scope="col">Tên sinh viên</th>
+              <th scope="col">Số điện thoại</th>
+              <th scope="col">Tên sách</th>
+              <th scope="col">Mã sách</th>
+              <th scope="col">Ngày mượn</th>
+              <th scope="col">Ngày trả</th>
+              <th scope="col">Status</th>
+            </tr>
+            <tr>
+              <td>232630226</td>
+              <td>Phạm Quang Huy</td>
+              <td>0983654356</td>
+              <td>Doremon</td>
+              <td>002</td>
+              <td>20/11/2023</td>
+              <td>1/1/2024</td>
+              <td>Chấp nhận</td>
+            </tr>
+            <tr>
+              <td>232630225</td>
+              <td>Hồ Sỹ Sơn</td>
+              <td>0983457687</td>
+              <td></td>
+              <td>003</td>
+              <td>21/3/2024</td>
+              <td>3/8/2024</td>
+              <td>Chấp nhận</td>
+            </tr>
+            <tr>
+              <td>232630224</td>
+              <td>Phạm Quang Hùng</td>
+              <td>0335688386</td>
+              <td>Ăng ten và truyền sóng</td>
+              <td>004</td>
+              <td>22/3/2024</td>
+              <td>22/4/2024</td>
+              <td>Chấp nhận</td>
+            </tr>
+            <tr>
+              <td>232630223</td>
+              <td>Nguyễn Hồng Phú</td>
+              <td>0956488888</td>
+              <td>Bài giảng mạng máy tính</td>
+              <td>005</td>
+              <td>2/2/2000</td>
+              <td>23/5/2024</td>
+              <td>Chấp nhận</td>
+            </tr>
+          </thead>
+        </table>
+        <footer>
+          <p class="footer1">
+            &copy; University Of Transport And Communication.
+          </p>
+          <p>
+            <a href="/about">Giới thiệu</a> | <a href="/contact">Liên hệ</a> |
+            <a href="/privacy">Chính sách bảo mật</a>
+          </p>
+        </footer>
+      </div>
     </div>
-    <button
+    <script src="./qlnguoi.js"></script>
+
+    <!-- <button
       id="violate"
       type="button"
       class="btn btn-primary mt-3"
@@ -93,23 +123,15 @@
     <div id="mockupContainer" class="mockup hidden">
       <div class="mockup-content">
         <span id="closeMockupBtn" class="close">&times;</span>
-        <!-- <label for="violationSelect">Chọn lý do vi phạm:</label>
-            <section id="violationSelect">
-                <option value="">-- Chọn lý do --</option>
-                <option value="late">Nộp quá hạn</option>
-                <option value="lost">Mất sách</option>
-                <option value="damaged">Bị hư hỏng</option>
-            </section> -->
+        <label for="violationSelect">Chọn lý do vi phạm:</label>
+        <section id="violationSelect">
+          <option value="">-- Chọn lý do --</option>
+          <option value="late">Nộp quá hạn</option>
+          <option value="lost">Mất sách</option>
+          <option value="damaged">Bị hư hỏng</option>
+        </section>
         <h2>Đây là mockup</h2>
       </div>
-    </div>
-    <div class="container">
-      <div class="header">
-        <h3>Một số sách tham khảo</h3>
-        <img src="/images/anh1.jpn.jpg" alt="Anh1" />
-      </div>
-    </div>
-
-    <script src="./qlnguoi.js"></script>
+    </div> -->
   </body>
 </html>

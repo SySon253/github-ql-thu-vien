@@ -10,6 +10,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+  height: 100vh;
 }
 
 /* Định dạng thanh điều hướng bên trái */
@@ -48,22 +49,29 @@ body {
 
 /* Định dạng nội dung trang */
 .mt-3 {
+  width: 90%;
   margin-top: 20px;
   margin-left: 200px;
   padding: 30px;
-  background-image: linear-gradient(0, #fff);
+  background-image: url("/images/anhnen99.jpg");
 }
 
-/* Định dạng bảng */
-.table {
-  width: 90%;
-  border-collapse: collapse;
+.table1 {
+  width: 100%; /* Chiều rộng của bảng */
+  max-height: 400px; /* Chiều cao tối đa của bảng */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  border: 1px solid #ccc; /* Viền ngoài bảng */
   margin-top: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 80px;
+  box-sizing: border-box;
   border-radius: 8px;
-  overflow: hidden;
-  margin-left: 60px;
+}
+table {
+  border-collapse: collapse;
+  border-radius: 8px;
+  max-height: 700px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .table th,
@@ -79,6 +87,13 @@ body {
   color: #ffffff;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  position: sticky;
+  top: 0; /* Giữ cho tiêu đề ở trên cùng */
+  z-index: 1; /* Đảm bảo tiêu đề nằm trên các hàng khác */
 }
 
 .table tbody tr {
@@ -94,7 +109,7 @@ body {
 }
 
 /* Định dạng nút Violate */
-.btn-primary {
+/*.btn-primary {
   margin-left: 250px;
   background-color: #4a90e2;
   border: none;
@@ -175,7 +190,7 @@ body {
 }
 
 /* Định dạng modal */
-.mockup {
+/*.mockup {
   display: none;
   position: fixed;
   top: 0;
@@ -211,14 +226,14 @@ body {
 }
 
 /* Định dạng mockup text */
-h2 {
+/*h2 {
   text-align: center;
   color: #444;
   margin-bottom: 20px;
 }
 
 /* Hiệu ứng fade-in cho modal */
-.mockup.show {
+/*.mockup.show {
   display: flex;
   animation: fadeIn 0.3s;
 }
@@ -234,11 +249,9 @@ h2 {
 
 .search-container {
   background-color: #1074ee;
-}
+}*/
 footer {
-  margin-top: 260px;
-  background-image: linear-gradient(0, #fff);
-  color: black;
+  margin-top: 45px;
   text-align: center;
   padding: 20px 0;
   font-size: 17px;
@@ -246,15 +259,24 @@ footer {
   display: flex;
 }
 footer a {
-  color: black;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 10px;
+  background-color: #4d88ed;
 }
 
 footer a:hover {
   text-decoration: underline;
-  color: #1074ee;
+  color: gray;
+  background-color: #ffffff;
 }
 .footer1 {
   padding-right: 42%;
+}
+.table1 {
+  max-height: 500px; /* Chiều cao tối đa của khung chứa */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  overflow-x: auto; /* Cho phép cuộn ngang nếu bảng rộng */
+  border: 1px solid #ddd; /* Đường viền bên ngoài bảng */
+  margin: 20px 0;
 }

@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+.side-menu {
+  top: 0;
+  width: 15%;
+  background-color: #4d88ed;
+  color: #ffffff;
+  position: fixed;
+  height: 100%;
+  border: 5px solid #4d88ed;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.side-menu img {
+  width: 100px;
+  height: 100px;
+  background-color: #1074ee;
+  border-radius: 10px;
+}
+
+.side-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  transition: background 0.2s, padding-left 0.2s;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.side-menu a:hover {
+  background-color: #3a4b61;
+  padding-left: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0; /* Đặt padding thành 0 */
+    /* background-image: url(images/anhthuvien.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;  */
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+  }
+  
+  body div {
+    /* font-family: Arial, sans-serif; */
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 220px; /* Độ rộng sidebar */
+    background-color: #4d88ed;
+    position: fixed; /* Cố định thanh bên */
+    height: 100%; /* Chiều cao 100% */
+    padding-top: 30px; /* Giữ padding trên nếu muốn */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* Đổi từ center sang flex-start để căn trái */
+    padding-left: 10px; /* Thêm padding bên trái nếu cần */
+  }
+  
+  
+  
+/*   
+  body div img {
+    width: 50%; 
+    height: auto; 
+    border-radius: 60px; 
+    margin-bottom: 20px; 
+    display: block;
+    margin: 0 auto 20px auto; 
+    background-position: center;
+  } */
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Thêm margin-left cho nội dung chính để không bị che khuất */
+  main {
+    margin-left: 240px; /* Để tránh bị đè lên sidebar (220px + 20px để tạo khoảng cách) */
+    padding: 20px; /* Khoảng cách bên trong cho phần nội dung chính */
+  }
+  
+  section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  footer {
+
+    text-align: center;
+    /* padding: 20px 0; */
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    margin-top: 160px;
+    margin-left: 20px;
+  }
+  footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: gray;
+    background-color: #ffffff;
+  }
+  .footer1 {
+    padding-right: 42%;
+  }

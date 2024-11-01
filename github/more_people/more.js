@@ -58,4 +58,4 @@ $buttonCreate.onclick = () => {
 // $closeMockupBtn.addEventListener('click',function(){
 //     $mockupContainer.classList.add('hidden');
 // });
-renderStudents();
+// renderStudents();

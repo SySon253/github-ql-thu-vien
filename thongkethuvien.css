@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0; /* Đặt padding thành 0 */
+  background-image: url(images/anhthuvien.jpg);
+  background-size: cover; /* Ảnh sẽ phủ toàn bộ vùng nền */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp lại ảnh */
+  background-attachment: fixed; /* Ảnh nền cố định khi cuộn */
+}
+
+body div {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 220px; /* Độ rộng sidebar */
+  background-color: #4d88ed;
+  position: fixed; /* Cố định thanh bên */
+  height: 100%; /* Chiều cao 100% */
+  padding-top: 30px; /* Giữ padding trên nếu muốn */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start; /* Đổi từ center sang flex-start để căn trái */
+  padding-left: 10px; /* Thêm padding bên trái nếu cần */
+}
+
+body div, body div * {
+  color: white !important;
+  text-decoration: none;
+   
+  text-align: left; /* Căn trái chữ */
+   
+  font-size: 14px; /* Kích thước chữ nhỏ hơn */
+}
+
+
+
+body div img {
+  width: 50%; /* Để ảnh vừa với chiều rộng của sidebar */
+  height: auto; /* Duy trì tỉ lệ gốc của ảnh */
+  border-radius: 60px; /* Tạo góc bo tròn cho ảnh */
+  margin-bottom: 20px; /* Tạo khoảng cách bên dưới ảnh */
+  display: block;
+  margin: 0 auto 20px auto; /* Tạo khoảng cách bên dưới và căn giữa ảnh */
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Thêm margin-left cho nội dung chính để không bị che khuất */
+main {
+  margin-left: 240px; /* Để tránh bị đè lên sidebar (220px + 20px để tạo khoảng cách) */
+  padding: 20px; /* Khoảng cách bên trong cho phần nội dung chính */
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+  

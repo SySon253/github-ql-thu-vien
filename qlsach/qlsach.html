@@ -22,10 +22,11 @@
     <div class="container">
         
         <input 
-            type="number"
+            type="code"
             class="form-control mt-3"
             id="code"
             placeholder="Mã">
+        <span id="error_code" style="color: red;font-size: 12px;"></span>
         <input 
             type="text"
             class="form-control mt-3"
@@ -48,7 +49,7 @@
             placeholder="Số lượng">
             <button id="create" type="button" class="btn btn-primary mt-3">Create book</button>
 			<button id="update" type="button" class="btn btn-primary mt-3" style="display: none">Update book</button>
-<div class="search-bar mt-5" style="display: flex;">
+        <div class="search-bar mt-5" style="display: flex;">
             <input 
                 type="text"
                 class="form-control"
@@ -68,6 +69,7 @@
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
+                <tbody id="table"></tbody>
             </table>
         </div>
     </div>

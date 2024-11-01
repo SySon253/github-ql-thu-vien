@@ -1,282 +1,77 @@
 /* more.css */
-
-/* Định dạng cơ bản cho body */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #eef2f7;
-  box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100vh;
-}
-
-/* Định dạng thanh điều hướng bên trái */
-.side-menu {
-  width: 220px;
-  background-color: #4d88ed;
-  color: #ffffff;
-  position: fixed;
-  height: 100vh;
-  border: 5px solid #4d88ed;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.side-menu img {
-  width: 100px;
-  height: 100px;
-  background-color: #1074ee;
-  border-radius: 10px;
-}
-
-.side-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  transition: background 0.2s, padding-left 0.2s;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-
-.side-menu a:hover {
-  background-color: #3a4b61;
-  padding-left: 30px;
-}
-
-/* Định dạng nội dung trang */
-.mt-3 {
-  width: 90%;
-  margin-top: 20px;
-  margin-left: 200px;
-  padding: 30px;
-  background-image: url("/images/anhnen99.jpg");
-}
-
-.table1 {
-  width: 100%; /* Chiều rộng của bảng */
-  max-height: 400px; /* Chiều cao tối đa của bảng */
-  overflow-y: auto; /* Cho phép cuộn dọc */
-  border: 1px solid #ccc; /* Viền ngoài bảng */
-  margin-top: 20px;
-  margin-left: 80px;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-table {
-  border-collapse: collapse;
-  border-radius: 8px;
-  max-height: 700px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-}
-
-.table th,
-.table td {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  font-size: 14px;
-}
-
-.table th {
-  background-color: #4a90e2;
-  color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  font-size: 14px;
-  position: sticky;
-  top: 0; /* Giữ cho tiêu đề ở trên cùng */
-  z-index: 1; /* Đảm bảo tiêu đề nằm trên các hàng khác */
-}
-
-.table tbody tr {
-  transition: 2s;
-}
-
-.table tbody tr:nth-child(even) {
-  background-color: #f8f9fb;
-}
-
-.table tbody tr:hover {
-  background-color: rgba(74, 144, 226, 0.1);
-}
-
-/* Định dạng nút Violate */
-/*.btn-primary {
-  margin-left: 250px;
-  background-color: #4a90e2;
-  border: none;
-  padding: 12px 24px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
-  * {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
+  /* Định dạng cơ bản cho body */
   body {
-    font-family: Lato, sans-serif;
-    background-color: rgba(0, 123, 255, 0.8);
-    font-size: 16px;
-    width: 1180px;
-    display: flex;
-  }
-  section {
-    width: calc(33.3%-20px);
-    float: left;
-    padding: 0 20px;
-  }
-  article {
-    background-color: #262626;
-    display: inline-block;
-    margin: 80px 20px 0 20px;
-    border: 5px solid #424242;
-    color: #a1a1a1;
-    text-align: center;
-    line-height: 20px;
-    width: 75%;
-  }
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: aliceblue;
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    
+    /* Định dạng thanh điều hướng bên trái */
+    .side-menu {
+      top: 0;
+      width: 15%;
+      background-color: #4d88ed;
+      color: #ffffff;
+      position: fixed;
+      height: 100%;
+      border: 5px solid #4d88ed;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+    .side-menu img {
+      width: 100px;
+      height: 100px;
+      background-color: #1074ee;
+      border-radius: 10px;
+    }
+    
+    .side-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      transition: background 0.2s, padding-left 0.2s;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    
+    .side-menu a:hover {
+      background-color: #3a4b61;
+      padding-left: 30px;
+    }
+    footer {
 
-  h1 {
-    font-size: 1.5em;
-    color: #fff;
-  }
-  article h1 {
-    padding: 30px 0;
-  }
-  .price {
-    font-size: 3em;
-    font-weight: bold;
-    color: #27dcc4;
-  }
-  ul {
-    padding: 0;
-  }
-  button {
-    background-color: #27dcc4;
-    color: #fff;
-    padding: 15px 30px;
-    margin: 10px 0;
-    font-size: 0.9em;
-    cursor: pointer;
-    border: none;
-  }
-  button:hover {
-    background-color: #acacac;
-    color: aquamarine;
-  }
-  li {
-    list-style-type: none;
-    padding: 5px 0;
-  }
-  article p {
-    padding: 30px 0;
-  }
-}
-
-.btn-primary:hover {
-  background-color: #357abd;
-  box-shadow: 0 6px 12px rgba(53, 122, 189, 0.4);
-}
-
-/* Định dạng modal */
-/*.mockup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.mockup-content {
-  background-color: #ffffff;
-  width: 420px;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Định dạng mockup text */
-/*h2 {
-  text-align: center;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-/* Hiệu ứng fade-in cho modal */
-/*.mockup.show {
-  display: flex;
-  animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.search-container {
-  background-color: #1074ee;
-}*/
-footer {
-  margin-top: 45px;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 17px;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-}
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-  background-color: #4d88ed;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: gray;
-  background-color: #ffffff;
-}
-.footer1 {
-  padding-right: 42%;
-}
-.table1 {
-  max-height: 500px; /* Chiều cao tối đa của khung chứa */
-  overflow-y: auto; /* Cho phép cuộn dọc */
-  overflow-x: auto; /* Cho phép cuộn ngang nếu bảng rộng */
-  border: 1px solid #ddd; /* Đường viền bên ngoài bảng */
-  margin: 20px 0;
-}
+      text-align: center;
+      /* padding: 20px 0; */
+      font-size: 17px;
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      margin-top: 325px;
+      margin-left: 105px;
+    }
+    footer a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+      
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+      color: gray;
+      background-color: #ffffff;
+    }
+    .footer1 {
+      padding-right: 42%;
+    }
